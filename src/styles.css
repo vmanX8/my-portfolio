@@ -1,0 +1,208 @@
+/* Base */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #222;
+  background: linear-gradient(135deg, #abced2, #f1f8e9);
+  min-height: 100vh;
+  overflow-x: hidden; /* keep this to avoid accidental horizontal scroll */
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Header */
+header {
+  position: fixed;
+  inset: 0 0 auto 0;        /* top:0; left:0; right:0 */
+  height: var(--header-h);  /* fixed height instead of only padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: clamp(0.5rem, 4vw, 1rem);
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;         /* wrap instead of clipping on narrow screens */
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: #007acc;
+}
+
+/* Keep content below the fixed header */
+main {
+  --header-h: 72px; /* tweak if your header looks taller/shorter */
+  margin-top: 120px; /* adjust if you change header padding/size */
+  padding-top: calc(var(--header-h) + 16px); /* content never hides under header */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-inline: clamp(0.5rem, 4vw, 1rem); /* aligns with header edges */
+  text-align: center; /* replaces the old body-wide centering */
+}
+
+/* Responsive: stack nav under title on small screens */
+@media (max-width: 520px) {
+  header {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+  header h1 {
+    flex: 1 1 100%;
+    text-align: left;
+    font-size: 1.25rem;
+  }
+  nav {
+    flex: 1 1 100%;
+    gap: 0.5rem;
+  }
+}
+
+section {
+  padding-block: 80px;                /* space above & below each section */
+  width: 100%;
+}
+
+/* About */
+#about, #projects, #contact {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Projects */
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: left;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.project-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.project-card p {
+  margin: 0 0 10px 0;
+  color: #444;
+  line-height: 1.6;
+}
+
+.project-card a {
+  font-weight: 600;
+  color: #0a66c2; /* LinkedIn-ish blue */
+  text-decoration: none;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Contact */
+#contact {
+  padding-block: 80px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+#contact p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.email-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  background-color: #007acc;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+.email-btn:hover {
+  background-color: #005fa3;
+}
