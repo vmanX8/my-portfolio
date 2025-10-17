@@ -1,0 +1,49 @@
+/* ---------- Base & tokens ---------- */
+:root {
+  --header-h: 72px;
+  --bg-grad-a: #abced2;
+  --bg-grad-b: #f1f8e9;
+  --text: #222;
+  --muted: #555;
+  --surface: rgba(255,255,255,0.75);
+  --surface-weak: rgba(255,255,255,0.4);
+  --border: rgba(0,0,0,0.06);
+  --brand: #007acc;
+  --brand-600: #005fa3;
+  --card-radius: 10px;
+  --space: 16px;
+}
+
+html { scroll-behavior: smooth; }
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg-grad-a), var(--bg-grad-b));
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+h1 { font-size: 2.5rem; color: #333; margin: 0 0 1rem; }
+p  { font-size: 1.1rem; color: var(--muted); margin: 0; }
+
+/* Reveal utilities (used by stagger hook) */
+.stagger > * { opacity: 0; transform: translateY(10px); }
+.stagger > *.in { animation: rise 500ms ease forwards; }
+
+.will-rise { opacity: 0; transform: translateY(10px); }
+.will-rise.in { animation: rise 500ms ease forwards; }
+
+@keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .stagger > * { opacity: 1; transform: none; }
+  .stagger > *.in { animation: none !important; }
+}

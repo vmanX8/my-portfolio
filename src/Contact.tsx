@@ -1,4 +1,9 @@
+import { useStaggerEffect } from "./hooks/useStaggerEffect";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
 export default function Contact() {
+    useStaggerEffect(".stagger > *", 120);
+
     return (
         <section id="contact">
             <div className="container">
@@ -7,10 +12,14 @@ export default function Contact() {
                     I’m always open to new opportunities or collaborations.<br />
                     Feel free to reach out!
                 </p>
-                <a className="email-btn" href="mailto:v.manouhos@gmail.com">
-                    📧 Send Email
-                </a>
+
+                <div className="social-links stagger">
+                    <a href="mailto:v.manouhos@gmail.com" aria-label="Email"><FaEnvelope /></a>
+                    <a href="https://github.com/vmanX8" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
+                    <a href="https://www.linkedin.com/in/vangelis-manouhos-3b0173127/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+                </div>
             </div>
+            <span>&#174; {new Date().getFullYear()}  V. Manouhos</span>
         </section>
-    )
+    );
 }

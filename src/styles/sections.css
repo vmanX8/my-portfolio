@@ -1,0 +1,41 @@
+/* ---------- About ---------- */
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ---------- Contact ---------- */
+#contact {
+  padding-block: 80px;
+  text-align: center;
+  background: var(--surface-weak);
+}
+
+#contact span {
+  display: block;
+  margin-top: 1rem;               /* space above line */
+  padding-top: 1rem;              /* space below line */
+  border-top: 1px solid rgba(0,0,0,0.15); /* subtle separator */
+  font-size: 0.9rem;
+  color: #555;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+#contact p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+  color: #444;
+}
