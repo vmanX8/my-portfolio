@@ -9,7 +9,7 @@ export const projects = [
     description: "React + Vite + plain CSS. Clean layout, responsive, accessible.",
     icon: FaUserCircle,
     code: "https://github.com/vmanX8/my-portfolio",
-    link: "https://my-portfolio-vmanx8s-projects.vercel.app/"
+    link: "https://my-portfolio-l4ej.vercel.app/"
   },
   {
     title: "Snakes & Ladders Game",
