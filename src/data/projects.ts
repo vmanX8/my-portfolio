@@ -2,8 +2,6 @@ import { FaUserCircle, FaCarSide, FaWallet } from "react-icons/fa";
 import { GiSnake } from "react-icons/gi";
 import { WiDaySunny } from "react-icons/wi";
 import { BsQuestionCircleFill } from "react-icons/bs";
-import { BiTimer } from "react-icons/bi";
-import { MdMovie } from "react-icons/md";
 
 export const projects = [
   {
