@@ -9,7 +9,7 @@ export const projects = [
     description: "React + Vite + plain CSS. Clean layout, responsive, accessible.",
     icon: FaUserCircle,
     code: "https://github.com/vmanX8/my-portfolio",
-    link: "https://my-portfolio-ten-beta-w8rnleem6r.vercel.app/"
+    link: "https://my-portfolio-vmanx8s-projects.vercel.app/"
   },
   {
     title: "Snakes & Ladders Game",
@@ -22,8 +22,8 @@ export const projects = [
     title: "Weather App",
     description: "Live weather dashboard built with React and the OpenWeather API.",
     icon: WiDaySunny,
-    code: "https://github.com/vmanX8/weather",
-    link: "#"
+    code: "https://github.com/vmanX8/weather-app",
+    link: "https://weather-app-six-nu-73.vercel.app/"
   },
   {
     title: "Quiz App",
