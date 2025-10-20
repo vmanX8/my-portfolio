@@ -1,0 +1,189 @@
+/*Buttons*/
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.btn.live  { background-color: var(--brand); color: #fff; }
+.btn.code  { background-color: transparent; border: 2px solid var(--brand); color: var(--brand); }
+.btn.live:hover { background-color: var(--brand-600); }
+.btn.code:hover { background-color: var(--brand); color: #fff; }
+
+/* Keyboard focus polish (optional) */
+.btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Projects: grid & cards */
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: var(--space);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  will-change: transform;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.icon-wrapper {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.icon-wrapper svg {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.project-card:hover .icon-wrapper svg {
+  animation: pulse-soft 1.2s infinite alternate;
+  /* or replace with: transform: scale(1.07) rotate(1deg); */
+}
+
+.project-card h3 {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.project-card p {
+  color: #444;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  flex-grow: 1;
+}
+
+.buttons {
+  margin-top: auto; 
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  opacity: 0.95;
+}
+.project-card:hover .buttons { opacity: 1; }
+
+/*Contact: social icons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+.social-links a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+.social-links a:hover { color: var(--brand); }
+.social-links a svg {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-links a:hover svg {
+  animation: pulse-soft 1.2s infinite alternate;
+  /* or: transform: translateY(-4px) scale(1.08); */
+}
+
+/* Soft pulse animation */
+@keyframes pulse-soft {
+  from {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px rgba(0,122,204,0.25));
+  }
+  to {
+    transform: scale(1.12) rotate(3deg);
+    filter: drop-shadow(0 0 8px rgba(0,122,204,0.45));
+  }
+}
+
+/*Upcoming Projects*/
+
+/* Summary styled like a button row */
+.disclose__summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Chevron rotation when open */
+details[open] .chev {
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
+/* Panel height animation (max-height trick) */
+.disclose__panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s ease;
+}
+details[open] .disclose__panel {
+  max-height: 800px;
+  padding-top: 0.75rem;
+}
+
+/* Upcoming list & item layout */
+.upcoming-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.upcoming-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.upcoming-icon {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+}
+
+.upcoming-body {
+  flex: 1;
+}
+
+.upcoming-body strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.meta { display: flex; gap: .5rem; flex-wrap: wrap; }
+.chip { background: rgba(0,0,0,0.06); padding: .1rem .4rem; border-radius: 999px; font-size: .8rem; }
+.eta { color: #555; font-size: .85rem; }

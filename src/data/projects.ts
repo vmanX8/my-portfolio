@@ -3,6 +3,23 @@ import { GiSnake } from "react-icons/gi";
 import { WiDaySunny } from "react-icons/wi";
 import { BsQuestionCircleFill } from "react-icons/bs";
 
+/**
+ * Represents a project displayed in the portfolio.
+ * @property title - The name of the project.
+ * @property description - A short summary of what it does.
+ * @property icon - (Optional) React icon component to visually represent the project.
+ * @property link - (Optional) URL to the live demo.
+ * @property code - (Optional) URL to the GitHub repository.
+ */
+export type projects ={
+  title: string;
+  description: string;
+  icon?: React.ComponentType<{ size?: number; color?: string }>;
+  code?: string;
+  link?: string; 
+}
+
+
 export const projects = [
   {
     title: "Portfolio Website",
@@ -25,25 +42,47 @@ export const projects = [
     code: "https://github.com/vmanX8/weather-app",
     link: "https://weather-app-six-nu-73.vercel.app/"
   },
+];
+
+
+/**
+ * A project that is planned or in progress, shown in the foldable section.
+ *
+ * @property title - Short project name.
+ * @property summary - One-line description of what the project will do.
+ * @property status - Optional lifecycle state.
+ * @property eta - Optional rough timeline, e.g. "Q4 2025".
+ * @property icon - Optional React icon component (from react-icons).
+ */
+export type UpcomingProject = {
+  title: string;
+  summary: string;
+  icon?: React.ComponentType<{ size?: number; color?: string }>;
+  status?: "research" | "design" | "testing";
+  eta?: string;
+
+}
+
+  export const UpcomingProject = [
   {
     title: "Quiz App",
-    description: "Interactive quiz app with score tracking, focusing on React state management.",
+    summary: "Interactive quiz app with score tracking, focusing on React state management.",
     icon: BsQuestionCircleFill,
-    code: "https://github.com/vmanX8/quiz",
-    link: "#"
+    status: "testing",
+    eta: "Q4 2025"
   },
   {
     title: "SmartPark",
-    description: "Tracks parking spot occupancy and calculates cost based on entry and exit times.",
+    summary: "Tracks parking spot occupancy and calculates cost based on entry and exit times.",
     icon: FaCarSide,
-    code: "https://github.com/vmanX8/sm-park",
-    link: "#"
+    status: "design",
+    eta: "Q1 2026"
   },
   {
     title: "Expense Tracker",
-    description: "Simple React expense tracker with categories, filters, and local storage.",
+    summary: "Simple React expense tracker with categories, filters, and local storage.",
     icon: FaWallet,
-    code: "https://github.com/vmanX8/expense",
-    link: "#"
+    status: "research",
+    eta: "Q1 2026"
   },
 ];

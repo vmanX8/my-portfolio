@@ -21,11 +21,13 @@
 
 #contact span {
   display: block;
-  margin-top: 1rem;               /* space above line */
-  padding-top: 1rem;              /* space below line */
-  border-top: 1px solid rgba(0,0,0,0.15); /* subtle separator */
+  margin-top: 1.5rem;  
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(0,0,0,0.15);
   font-size: 0.9rem;
   color: #555;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
 }
 
 #contact h2 {

@@ -1,7 +1,7 @@
 /* ---------- Header & nav ---------- */
 header {
   position: fixed;
-  inset: 0 0 auto 0;       /* top:0; left/right:0 */
+  inset: 0 0 auto 0;
   height: var(--header-h);
   display: flex;
   align-items: center;
@@ -31,12 +31,27 @@ nav a {
   font-size: 0.95rem;
 }
 
-nav a.active { color: #0a66c2; position: relative; }
-nav a.active::after {
-  content: "";
-  position: absolute; left: 0; right: 0; bottom: -6px;
-  height: 2px; background: #0a66c2; border-radius: 2px;
+nav a.active {
+  font-weight: 700;
+  color: #0097a7;
+  position: relative;
+  text-shadow: 0 0 6px rgba(0, 151, 167, 0.6);
+  animation: glowPulse 2.5s ease-in-out infinite;
 }
+
+
+/* Pulsing glow text animation */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 6px rgba(0, 151, 167, 0.4),
+                 0 0 12px rgba(171, 206, 210, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(0, 151, 167, 0.8),
+                 0 0 24px rgba(171, 206, 210, 0.5);
+  }
+}
+
 nav a:hover { color: var(--brand); }
 
 /* ---------- Page layout ---------- */

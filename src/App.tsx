@@ -1,16 +1,17 @@
-import Header from './Header'
-import About from './About'
-import Projects from './Projects'
-import Contact from './Contact'
+import Header from './Components/Header'
+import About from './Components/About'
+import Projects from './Components/Projects'
+import Contact from './Components/Contact'
+import UpcomingProjects from './Components/Upcoming'
 import './styles/base.css';
 import './styles/layout.css';
-import './styles/components.css';
+import './styles/compnts.css';
 import './styles/sections.css';
-import { useActiveSection } from "./hooks/useActiveSection";
+import { useHighlightNavSection } from "./hooks/useHighlightNavSection";
 
 
 export default function App() {
-  useActiveSection();
+  useHighlightNavSection();
   return (
     <>
       <Header />
@@ -22,6 +23,7 @@ export default function App() {
         </div>
         <About />
         <Projects />
+        <UpcomingProjects />
         <Contact />
       </main>
     </>

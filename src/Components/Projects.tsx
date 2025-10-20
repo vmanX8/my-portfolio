@@ -1,10 +1,24 @@
-import { projects } from "./data/projects";
-import { useStaggerEffect } from "./hooks/useStaggerEffect";
-
+import { projects } from "../data/projects";
+import { useStaggerEffect } from "../hooks/useStaggerEffect";
+/**
+ * Renders the "Projects" section of the portfolio.
+ *
+ * @remarks
+ * This component lists all completed projects from the `projects` dataset.
+ * Each project card displays its icon, title, description, and buttons
+ * linking to a live demo and/or source code.
+ *
+ * The appearance of each card is animated using the `useStaggerEffect` hook,
+ * which delays the entry of each card for a smooth cascading reveal as the user scrolls.
+ *
+ * @dependencies
+ * - `projects` data array from `./data/projects`
+ * - `useStaggerEffect` hook for scroll-based animation
+ *
+ * @returns JSX markup for the Projects section including all project cards.
+ */
 export default function Projects() {
-    // cards first
     useStaggerEffect(".projects-grid > .project-card", 100, 0);
-    // icons after cards
     useStaggerEffect(".projects-grid .icon-wrapper", 100, 180);
 
     return (
