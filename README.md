@@ -14,29 +14,6 @@ A modern, responsive portfolio website built with **React**, **TypeScript**, and
 
 ---
 
-## 📁 Project Structure
-src/
-├── components/
-│ ├── Header.tsx
-│ ├── About.tsx
-│ ├── Projects.tsx
-│ ├── Contact.tsx
-│ └── hooks/
-│ ├── useStaggerEffect.ts
-│ └── useActiveSection.ts
-├── data/
-│ └── projects.ts
-├── styles/
-│ ├── base.css
-│ ├── layout.css
-│ ├── components.css
-│ └── sections.css
-├── App.tsx
-├── main.tsx
-└── vite.config.ts
-
----
-
 ## 🛠️ Tech Stack
 - **React** (UI framework)
 - **TypeScript** (type safety)
