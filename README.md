@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio website built with **React**, **TypeScript**, and **Vite** — styled with **plain CSS** for a lightweight and clean result.
 
+---
+
 ## 🧩 Features
 - ⚡ Fast and optimized with Vite
 - 💻 Built using React + TypeScript
@@ -9,6 +11,8 @@ A modern, responsive portfolio website built with **React**, **TypeScript**, and
 - 🧠 Responsive and accessible layout
 - ✨ Animated with intersection observers (custom `useStaggerEffect` hook)
 - 📂 Modular structure for easy scaling
+
+---
 
 ## 📁 Project Structure
 src/
@@ -31,6 +35,8 @@ src/
 ├── main.tsx
 └── vite.config.ts
 
+---
+
 ## 🛠️ Tech Stack
 - **React** (UI framework)
 - **TypeScript** (type safety)
@@ -38,6 +44,8 @@ src/
 - **Plain CSS** (modularized into base/layout/components/sections)
 - **React Icons** (icons)
 - **GitHub Pages / Vercel** (deployment)
+
+---
 
 ## ⚙️ Setup & Run Locally
 
@@ -55,11 +63,9 @@ npm run dev
 
 Open your browser at http://localhost:5173.
 
+---
 
-📬 Contact
-
+## 📬 Contact
 📧 v.manouhos@gmail.com
-
 🔗 https://www.linkedin.com/in/vangelis-manouhos-3b0173127/
-
 💻 https://github.com/vmanX8
