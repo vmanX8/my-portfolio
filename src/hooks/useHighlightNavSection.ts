@@ -1,20 +1,9 @@
 import { useEffect } from "react";
 
 /**
- * React hook that highlights the current section link in the navigation bar
- * based on the user's scroll position.
+ * Keeps the nav link in sync with the section currently in view.
  *
- * @param ids - Array of section IDs <nav> strings
- *              that correspond to `<section id="...">` elements in the page.
- *
- * The hook:
- * - Observes each section with `IntersectionObserver`.
- * - Adds the `active` CSS class to the `<nav>` link whose `href` matches the section currently in view.
- * - Removes `active` from all other links.
- *
- * @remarks
- * This hook performs DOM manipulation and returns nothing.
- * Ensure section IDs match the `href` attributes in your navigation for correct behavior.
+ * @param ids Section ids to observe (matching section ids and nav hrefs).
  */
 export function useHighlightNavSection(ids: string[] = ["about", "projects", "contact"]): void {
   useEffect(() => {

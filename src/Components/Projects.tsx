@@ -1,21 +1,10 @@
 import { projects } from "../data/projects";
 import { useStaggerEffect } from "../hooks/useStaggerEffect";
+
 /**
- * Renders the "Projects" section of the portfolio.
+ * Projects section showing cards from the projects data list.
  *
- * @remarks
- * This component lists all completed projects from the `projects` dataset.
- * Each project card displays its icon, title, description, and buttons
- * linking to a live demo and/or source code.
- *
- * The appearance of each card is animated using the `useStaggerEffect` hook,
- * which delays the entry of each card for a smooth cascading reveal as the user scrolls.
- *
- * @dependencies
- * - `projects` data array from `./data/projects`
- * - `useStaggerEffect` hook for scroll-based animation
- *
- * @returns JSX markup for the Projects section including all project cards.
+ * @returns JSX for the projects section.
  */
 export default function Projects() {
     useStaggerEffect(".projects-grid > .project-card", 100, 0);
@@ -45,7 +34,7 @@ export default function Projects() {
                                             target="_blank"
                                             rel="noreferrer noopener"
                                             className="btn live"
-                                            aria-label={`${project.title} – Live Demo`}
+                                            aria-label={`${project.title} - Live Demo`}
                                         >
                                             Live Demo
                                         </a>
@@ -56,7 +45,7 @@ export default function Projects() {
                                             target="_blank"
                                             rel="noreferrer noopener"
                                             className="btn code"
-                                            aria-label={`${project.title} – Source Code on GitHub`}
+                                            aria-label={`${project.title} - Source Code on GitHub`}
                                         >
                                             View Code
                                         </a>

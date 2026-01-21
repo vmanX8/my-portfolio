@@ -1,19 +1,18 @@
 import { UpcomingProject } from "../data/projects";
+
 /**
- * Foldable "Upcoming Projects" section using native <details>.
+ * Collapsible upcoming projects section using native details.
  *
- * @remarks
- * Accessible by default. Uses `open` attribute for initial state.
- * Animates panel with a max-height trick when `animate` is true.
+ * @returns JSX for the upcoming projects section.
  */
 export default function UpcomingProjects() {
     return (
-        <section id="upcoming" >
+        <section id="upcoming">
             <div className="container">
                 <details open={false} className={true ? "disclose disclose--animated" : "disclose"}>
                     <summary className="disclose__summary">
                         <h2>Upcoming Projects</h2>
-                        <span aria-hidden="true" className="chev">▸</span>
+                        <span aria-hidden="true" className="chev">{">"}</span>
                     </summary>
 
                     <div className="disclose__panel">

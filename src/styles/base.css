@@ -1,4 +1,3 @@
-/* ---------- Base & tokens ---------- */
 :root {
   --header-h: 72px;
   --bg-grad-a: #abced2;
@@ -33,7 +32,6 @@ body {
 h1 { font-size: 2.5rem; color: #333; margin: 0 0 1rem; }
 p  { font-size: 1.1rem; color: var(--muted); margin: 0; }
 
-/* Reveal utilities (used by stagger hook) */
 .stagger > * { opacity: 0; transform: translateY(10px); }
 .stagger > *.in { animation: rise 500ms ease forwards; }
 
@@ -42,7 +40,6 @@ p  { font-size: 1.1rem; color: var(--muted); margin: 0; }
 
 @keyframes rise { to { opacity: 1; transform: translateY(0); } }
 
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .stagger > * { opacity: 1; transform: none; }
   .stagger > *.in { animation: none !important; }

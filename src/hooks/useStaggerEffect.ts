@@ -1,19 +1,17 @@
 import { useEffect } from "react";
 
 /**
- * Custom React hook that staggers entrance animations for selected DOM elements.
+ * Staggers reveal animations for a set of elements.
  *
- * @param selector - CSS selector string for the elements to animate (default: ".stagger > *").
- * @param stepDelay - Delay (in ms) added between each element’s animation start (default: 120).
- * @param baseDelay - Initial delay (in ms) before the first animation starts (default: 0).
- *
- * Each element matched by `selector` gets its own animationDelay and an 'in' class when it enters the viewport.
+ * @param selector CSS selector for the elements to animate.
+ * @param stepDelay Delay in ms between each element.
+ * @param baseDelay Initial delay in ms before the first element.
  */
 export function useStaggerEffect(
-  selector:string = ".stagger > *", 
-  stepDelay:number = 120,
+  selector: string = ".stagger > *",
+  stepDelay: number = 120,
   baseDelay: number = 0
-):void {
+): void {
   useEffect(() => {
     const items = document.querySelectorAll<HTMLElement>(selector);
     const io = new IntersectionObserver(

@@ -1,11 +1,7 @@
 /**
- * Renders the "About Me" section of the portfolio.
+ * About section content for the portfolio.
  *
- * @remarks
- * This component is a presentational section.
- * It introduces the developer, describing background and skills.
- *
- * @returns JSX markup for the About section of the portfolio page.
+ * @returns JSX for the about section.
  */
 export default function About() {
     return (

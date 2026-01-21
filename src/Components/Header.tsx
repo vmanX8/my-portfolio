@@ -1,10 +1,7 @@
 /**
- * Renders the "Header" section of the portfolio.
+ * Top header with name and navigation links.
  *
- * @remarks
- * Includes the name of the developer and the Navigation pane.
- *
- * @returns JSX markup for the Header and the Navigation section of the portfolio page.
+ * @returns JSX for the header and nav.
  */
 export default function Header() {
     return (

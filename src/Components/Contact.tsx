@@ -1,16 +1,10 @@
 import { useStaggerEffect } from "../hooks/useStaggerEffect";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
 /**
- * Renders the "Contact" section of the portfolio.
+ * Contact section with links and a short invite to reach out.
  *
- * @remarks
- * This component details the contact details of the developer.
- * Links to email, GitHub, and LinkedIn
- *
- * @dependencies
- * - `useStaggerEffect` hook for scroll-based animation
- * 
- * @returns JSX markup for the Contact section of the portfolio page.
+ * @returns JSX for the contact section.
  */
 export default function Contact() {
     useStaggerEffect(".stagger > *", 120);
@@ -20,7 +14,7 @@ export default function Contact() {
             <div className="container">
                 <h2>Contact Me</h2>
                 <p>
-                    I’m always open to new opportunities or collaborations.<br />
+                    I'm always open to new opportunities or collaborations.<br />
                     Feel free to reach out!
                 </p>
 

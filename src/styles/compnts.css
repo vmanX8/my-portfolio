@@ -1,4 +1,3 @@
-/*Buttons*/
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -12,14 +11,11 @@
 .btn.live:hover { background-color: var(--brand-600); }
 .btn.code:hover { background-color: var(--brand); color: #fff; }
 
-/* Keyboard focus polish (optional) */
 .btn:focus-visible {
   outline: 2px solid var(--brand);
   outline-offset: 2px;
   border-radius: 6px;
 }
-
-/* Projects: grid & cards */
 
 #projects h2 {
   font-size: 2rem;
@@ -62,7 +58,6 @@
 }
 .project-card:hover .icon-wrapper svg {
   animation: pulse-soft 1.2s infinite alternate;
-  /* or replace with: transform: scale(1.07) rotate(1deg); */
 }
 
 .project-card h3 {
@@ -87,7 +82,6 @@
 }
 .project-card:hover .buttons { opacity: 1; }
 
-/*Contact: social icons */
 .social-links {
   display: flex;
   justify-content: center;
@@ -105,10 +99,8 @@
 }
 .social-links a:hover svg {
   animation: pulse-soft 1.2s infinite alternate;
-  /* or: transform: translateY(-4px) scale(1.08); */
 }
 
-/* Soft pulse animation */
 @keyframes pulse-soft {
   from {
     transform: scale(1);
@@ -120,9 +112,6 @@
   }
 }
 
-/*Upcoming Projects*/
-
-/* Summary styled like a button row */
 .disclose__summary {
   list-style: none;
   cursor: pointer;
@@ -135,13 +124,11 @@
   justify-content: space-between;
 }
 
-/* Chevron rotation when open */
 details[open] .chev {
   transform: rotate(90deg);
   transition: transform 0.2s ease;
 }
 
-/* Panel height animation (max-height trick) */
 .disclose__panel {
   overflow: hidden;
   max-height: 0;
@@ -152,7 +139,6 @@ details[open] .disclose__panel {
   padding-top: 0.75rem;
 }
 
-/* Upcoming list & item layout */
 .upcoming-list {
   list-style: none;
   margin: 0;
