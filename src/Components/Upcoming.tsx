@@ -17,15 +17,56 @@ export default function UpcomingProjects() {
 
                     <div className="disclose__panel">
                         <ul className="upcoming-list">
-                            {UpcomingProject.map(({ title, summary, status, eta, icon: Icon }) => (
+                            {UpcomingProject.map(({ title, summary, status, eta, technologies, notes, code, frontendCode, link, icon: Icon }) => (
                                 <li key={title} className="upcoming-item">
                                     {Icon && <Icon size={20} className="upcoming-icon" />}
                                     <div className="upcoming-body">
                                         <strong>{title}</strong>
                                         <div className="meta">
-                                            <span>{summary}</span>
                                             {status && <em className="chip">{status}</em>}
                                             {eta && <span className="eta">{eta}</span>}
+                                        </div>
+                                        <p>{summary}</p>
+                                        {technologies && (
+                                            <p className="upcoming-tech">
+                                                <span>Tech stack:</span> {technologies.join(", ")}
+                                            </p>
+                                        )}
+                                        {notes && <p className="upcoming-note">{notes}</p>}
+                                        <div className="buttons upcoming-buttons">
+                                            {link && (
+                                                <a
+                                                    href={link}
+                                                    target="_blank"
+                                                    rel="noreferrer noopener"
+                                                    className="btn live"
+                                                    aria-label={`${title} - Live Demo`}
+                                                >
+                                                    Live Demo
+                                                </a>
+                                            )}
+                                            {code && (
+                                                <a
+                                                    href={code}
+                                                    target="_blank"
+                                                    rel="noreferrer noopener"
+                                                    className="btn code"
+                                                    aria-label={`${title} - Source Code on GitHub`}
+                                                >
+                                                    View Code
+                                                </a>
+                                            )}
+                                            {frontendCode && (
+                                                <a
+                                                    href={frontendCode}
+                                                    target="_blank"
+                                                    rel="noreferrer noopener"
+                                                    className="btn code"
+                                                    aria-label={`${title} - Frontend Source Code on GitHub`}
+                                                >
+                                                    Frontend Code
+                                                </a>
+                                            )}
                                         </div>
                                     </div>
                                 </li>
