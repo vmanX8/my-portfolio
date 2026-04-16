@@ -66,11 +66,29 @@
   color: #222;
 }
 
+.project-date {
+  color: #555;
+  font-size: 0.85rem;
+  margin-bottom: 0.65rem;
+}
+
 .project-card p {
   color: #444;
   line-height: 1.6;
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.project-card p:first-of-type {
   flex-grow: 1;
+}
+
+.project-meta {
+  font-size: 0.9rem;
+}
+
+.project-meta span {
+  font-weight: 600;
+  color: #222;
 }
 
 .buttons {
@@ -135,7 +153,7 @@ details[open] .chev {
   transition: max-height 0.25s ease;
 }
 details[open] .disclose__panel {
-  max-height: 800px;
+  max-height: 1800px;
   padding-top: 0.75rem;
 }
 
@@ -170,6 +188,19 @@ details[open] .disclose__panel {
   color: #222;
 }
 
+.upcoming-body p {
+  color: #444;
+  line-height: 1.6;
+  margin: 0.45rem 0 0;
+}
+
 .meta { display: flex; gap: .5rem; flex-wrap: wrap; }
 .chip { background: rgba(0,0,0,0.06); padding: .1rem .4rem; border-radius: 999px; font-size: .8rem; }
 .eta { color: #555; font-size: .85rem; }
+.upcoming-tech span,
+.upcoming-note {
+  font-weight: 600;
+}
+.upcoming-buttons {
+  margin-top: 0.75rem;
+}

@@ -26,7 +26,13 @@ export default function Projects() {
                                     </div>
                                 )}
                                 <h3>{project.title}</h3>
+                                {project.date && <span className="project-date">{project.date}</span>}
                                 <p>{project.description}</p>
+                                {project.technologies && (
+                                    <p className="project-meta">
+                                        <span>Tech stack:</span> {project.technologies.join(", ")}
+                                    </p>
+                                )}
                                 <div className="buttons">
                                     {project.link && (
                                         <a
